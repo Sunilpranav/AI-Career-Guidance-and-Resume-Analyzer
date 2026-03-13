@@ -1,0 +1,26 @@
+[
+  {
+    "id": "career_1",
+    "title": "Backend Developer",
+    "description": "Develops server-side logic, manages databases, and ensures high performance.",
+    "required_skills": ["Java", "SQL", "Spring Boot", "REST API", "Python", "Node.js"],
+    "tools": ["IntelliJ IDEA", "PostgreSQL", "Git"],
+    "responsibilities": "Write web services, manage database schema."
+  },
+  {
+    "id": "career_2",
+    "title": "Data Analyst",
+    "description": "Interprets data and provides reports using statistical techniques.",
+    "required_skills": ["Python", "SQL", "Excel", "Tableau", "Data Analysis"],
+    "tools": ["Power BI", "Jupyter Notebook"],
+    "responsibilities": "Clean data, visualize trends."
+  },
+  {
+    "id": "career_3",
+    "title": "Machine Learning Engineer",
+    "description": "Designs and deploys machine learning models.",
+    "required_skills": ["Python", "TensorFlow", "PyTorch", "Machine Learning", "Data Science"],
+    "tools": ["AWS SageMaker", "Docker"],
+    "responsibilities": "Train models, deploy AI solutions."
+  }
+]

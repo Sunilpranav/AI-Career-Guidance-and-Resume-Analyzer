@@ -1,0 +1,14 @@
+fastapi
+uvicorn
+sqlalchemy
+mysql-connector-python
+passlib[bcrypt]
+python-multipart
+pypdf
+docx
+langchain
+langchain-community
+chromadb
+ollama
+sentence-transformers
+pydantic

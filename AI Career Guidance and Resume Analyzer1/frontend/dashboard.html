@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerAI Dashboard</title>
+    <link rel="stylesheet" href="/assets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- SIDEBAR -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>🚀 CareerAI</h2>
+            </div>
+            
+            <ul class="nav-menu">
+                <li class="nav-item active" onclick="showSection('home')">
+                    <span>🏠 Home</span>
+                </li>
+                <li class="nav-item" onclick="showSection('upload')">
+                    <span>📄 Resume Analyzer</span>
+                </li>
+                <li class="nav-item" onclick="showSection('results')">
+                    <span>📊 My Results</span>
+                </li>
+                <li class="nav-item" onclick="showSection('chat')">
+                    <span>🤖 Career Chat</span>
+                </li>
+            </ul>
+
+            <div class="sidebar-footer">
+                <button onclick="logout()" class="btn-logout">Logout</button>
+            </div>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- HOME SECTION -->
+            <section id="home-section" class="content-section">
+                <div class="welcome-card">
+                    <h1>Welcome back, <span id="userName">Student</span>!</h1>
+                    <p>Your AI-powered career journey starts here. Upload your resume to unlock insights.</p>
+                    <button onclick="showSection('upload')" class="btn-primary">Start Analysis</button>
+                </div>
+                
+                <div class="card">
+                    <h2>💡 Quick Tips</h2>
+                    <p style="line-height: 1.6; color: var(--text-muted);">
+                        1. Ensure your resume is in <strong>PDF</strong> or <strong>DOCX</strong> format.<br>
+                        2. List your technical skills clearly for better detection.<br>
+                        3. Use the <strong>Career Chat</strong> to ask specific questions about your path.
+                    </p>
+                </div>
+            </section>
+
+            <!-- UPLOAD SECTION -->
+            <section id="upload-section" class="content-section" style="display:none;">
+                <div class="card">
+                    <h2><span class="icon">📤</span> Upload Resume</h2>
+                    <p class="subtitle" style="margin-bottom: 1.5rem; color: var(--text-muted);">Supported formats: PDF, DOCX</p>
+                    
+                    <div class="upload-area" id="dropArea">
+                        <input type="file" id="resumeFile" accept=".pdf,.docx" hidden>
+                        <div class="upload-icon">📁</div>
+                        <p>Drag & Drop your file here or <span class="browse-link" onclick="document.getElementById('resumeFile').click()">Browse Files</span></p>
+                        <p id="fileNameDisplay" class="file-name"></p>
+                    </div>
+                    
+                    <button onclick="analyzeResume()" class="btn-analyze">Analyze Resume</button>
+                </div>
+
+                <div id="loader" class="loader-container" style="display:none;">
+                    <div class="spinner"></div>
+                    <p style="color: var(--text-muted);">AI is analyzing your resume...</p>
+                </div>
+            </section>
+
+            <!-- RESULTS SECTION -->
+            <section id="results-section" class="content-section" style="display:none;">
+                <div class="card" style="margin-bottom: 1.5rem;">
+                    <h2>📊 Analysis Results</h2>
+                </div>
+                
+                <div class="results-grid">
+                    <div class="card result-card">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Detected Skills</h3>
+                        <div id="skillsList" class="skills-container"></div>
+                        <div class="chart-container" style="margin-top: 1.5rem; height: 200px;">
+                            <canvas id="skillsChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="card result-card wide">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Career Recommendations</h3>
+                        <div id="careerRec" class="career-text"></div>
+                    </div>
+
+                    <div class="card result-card">
+                        <h3 style="margin-bottom: 1rem; font-size: 1.1rem;">Learning Roadmap</h3>
+                        <div id="roadmapList" class="roadmap-container"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CHAT SECTION -->
+            <section id="chat-section" class="content-section" style="display:none;">
+                <div class="card chat-card">
+                    <div class="chat-header">
+                        <h2>🤖 Career Chatbot</h2>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Ask me anything about your career path.</p>
+                    </div>
+                    <div class="chat-window" id="chatWindow">
+                        <div class="msg bot">Hello! How can I help you with your career today?</div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="handleEnter(event)">
+                        <button onclick="sendChat()" class="btn-send">Send</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    
+    <script src="/js/app.js"></script>
+</body>
+</html>
