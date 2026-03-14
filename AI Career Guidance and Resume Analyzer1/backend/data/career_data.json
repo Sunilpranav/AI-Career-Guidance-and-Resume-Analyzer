@@ -1,26 +1,1853 @@
 [
-  {
-    "id": "career_1",
-    "title": "Backend Developer",
-    "description": "Develops server-side logic, manages databases, and ensures high performance.",
-    "required_skills": ["Java", "SQL", "Spring Boot", "REST API", "Python", "Node.js"],
-    "tools": ["IntelliJ IDEA", "PostgreSQL", "Git"],
-    "responsibilities": "Write web services, manage database schema."
-  },
-  {
-    "id": "career_2",
-    "title": "Data Analyst",
-    "description": "Interprets data and provides reports using statistical techniques.",
-    "required_skills": ["Python", "SQL", "Excel", "Tableau", "Data Analysis"],
-    "tools": ["Power BI", "Jupyter Notebook"],
-    "responsibilities": "Clean data, visualize trends."
-  },
-  {
-    "id": "career_3",
-    "title": "Machine Learning Engineer",
-    "description": "Designs and deploys machine learning models.",
-    "required_skills": ["Python", "TensorFlow", "PyTorch", "Machine Learning", "Data Science"],
-    "tools": ["AWS SageMaker", "Docker"],
-    "responsibilities": "Train models, deploy AI solutions."
-  }
+    {
+        "id": "career_1",
+        "title": "Software Engineer",
+        "description": "A professional responsible for tasks related to Software Engineer in the Tech industry.",
+        "required_skills": [
+            "Python",
+            "Java",
+            "SDLC",
+            "Algorithms",
+            "Git"
+        ],
+        "tools": [
+            "VS Code",
+            "Jira",
+            "Docker"
+        ],
+        "responsibilities": "Manage and execute key functions of Software Engineer.",
+        "salary_range": "$189,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_2",
+        "title": "Data Scientist",
+        "description": "A professional responsible for tasks related to Data Scientist in the Tech industry.",
+        "required_skills": [
+            "Python",
+            "R",
+            "Machine Learning",
+            "Statistics",
+            "SQL"
+        ],
+        "tools": [
+            "Jupyter",
+            "Pandas",
+            "TensorFlow"
+        ],
+        "responsibilities": "Manage and execute key functions of Data Scientist.",
+        "salary_range": "$53,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_3",
+        "title": "Web Developer",
+        "description": "A professional responsible for tasks related to Web Developer in the Tech industry.",
+        "required_skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "tools": [
+            "VS Code",
+            "Chrome DevTools",
+            "Git"
+        ],
+        "responsibilities": "Manage and execute key functions of Web Developer.",
+        "salary_range": "$92,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_4",
+        "title": "Mobile App Developer",
+        "description": "A professional responsible for tasks related to Mobile App Developer in the Tech industry.",
+        "required_skills": [
+            "Swift",
+            "Kotlin",
+            "React Native",
+            "UI Design"
+        ],
+        "tools": [
+            "Xcode",
+            "Android Studio"
+        ],
+        "responsibilities": "Manage and execute key functions of Mobile App Developer.",
+        "salary_range": "$179,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_5",
+        "title": "DevOps Engineer",
+        "description": "A professional responsible for tasks related to DevOps Engineer in the Tech industry.",
+        "required_skills": [
+            "Linux",
+            "AWS",
+            "Docker",
+            "Kubernetes",
+            "CI/CD"
+        ],
+        "tools": [
+            "Jenkins",
+            "Terraform",
+            "Ansible"
+        ],
+        "responsibilities": "Manage and execute key functions of DevOps Engineer.",
+        "salary_range": "$97,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_6",
+        "title": "Cloud Architect",
+        "description": "A professional responsible for tasks related to Cloud Architect in the Tech industry.",
+        "required_skills": [
+            "AWS",
+            "Azure",
+            "Networking",
+            "Security"
+        ],
+        "tools": [
+            "CloudFormation",
+            "Terraform"
+        ],
+        "responsibilities": "Manage and execute key functions of Cloud Architect.",
+        "salary_range": "$119,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_7",
+        "title": "Cybersecurity Analyst",
+        "description": "A professional responsible for tasks related to Cybersecurity Analyst in the Tech industry.",
+        "required_skills": [
+            "Network Security",
+            "Penetration Testing",
+            "Cryptography"
+        ],
+        "tools": [
+            "Kali Linux",
+            "Wireshark",
+            "Metasploit"
+        ],
+        "responsibilities": "Manage and execute key functions of Cybersecurity Analyst.",
+        "salary_range": "$90,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_8",
+        "title": "Database Administrator",
+        "description": "A professional responsible for tasks related to Database Administrator in the Tech industry.",
+        "required_skills": [
+            "SQL",
+            "NoSQL",
+            "Data Modeling",
+            "Backup"
+        ],
+        "tools": [
+            "MySQL",
+            "MongoDB",
+            "PostgreSQL"
+        ],
+        "responsibilities": "Manage and execute key functions of Database Administrator.",
+        "salary_range": "$188,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_9",
+        "title": "AI Research Scientist",
+        "description": "A professional responsible for tasks related to AI Research Scientist in the Tech industry.",
+        "required_skills": [
+            "Deep Learning",
+            "NLP",
+            "Computer Vision",
+            "Math"
+        ],
+        "tools": [
+            "PyTorch",
+            "TensorFlow",
+            "Hugging Face"
+        ],
+        "responsibilities": "Manage and execute key functions of AI Research Scientist.",
+        "salary_range": "$197,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_10",
+        "title": "Network Engineer",
+        "description": "A professional responsible for tasks related to Network Engineer in the Tech industry.",
+        "required_skills": [
+            "Routing",
+            "Switching",
+            "VPN",
+            "Firewalls"
+        ],
+        "tools": [
+            "Cisco IOS",
+            "Packet Tracer"
+        ],
+        "responsibilities": "Manage and execute key functions of Network Engineer.",
+        "salary_range": "$86,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_11",
+        "title": "UX Designer",
+        "description": "A professional responsible for tasks related to UX Designer in the Design industry.",
+        "required_skills": [
+            "Figma",
+            "Prototyping",
+            "User Research",
+            "Wireframing"
+        ],
+        "tools": [
+            "Sketch",
+            "Adobe XD"
+        ],
+        "responsibilities": "Manage and execute key functions of UX Designer.",
+        "salary_range": "$149,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_12",
+        "title": "UI Designer",
+        "description": "A professional responsible for tasks related to UI Designer in the Design industry.",
+        "required_skills": [
+            "Visual Design",
+            "Typography",
+            "Color Theory"
+        ],
+        "tools": [
+            "Figma",
+            "Illustrator"
+        ],
+        "responsibilities": "Manage and execute key functions of UI Designer.",
+        "salary_range": "$118,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_13",
+        "title": "Graphic Designer",
+        "description": "A professional responsible for tasks related to Graphic Designer in the Design industry.",
+        "required_skills": [
+            "Adobe Photoshop",
+            "Illustrator",
+            "Branding"
+        ],
+        "tools": [
+            "Wacom Tablet",
+            "Canva"
+        ],
+        "responsibilities": "Manage and execute key functions of Graphic Designer.",
+        "salary_range": "$198,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_14",
+        "title": "Product Manager",
+        "description": "A professional responsible for tasks related to Product Manager in the Business industry.",
+        "required_skills": [
+            "Agile",
+            "Roadmap",
+            "Market Research",
+            "Stakeholder Management"
+        ],
+        "tools": [
+            "Jira",
+            "Confluence",
+            "Trello"
+        ],
+        "responsibilities": "Manage and execute key functions of Product Manager.",
+        "salary_range": "$178,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_15",
+        "title": "Project Manager",
+        "description": "A professional responsible for tasks related to Project Manager in the Business industry.",
+        "required_skills": [
+            "PMP",
+            "Risk Management",
+            "Budgeting",
+            "Leadership"
+        ],
+        "tools": [
+            "MS Project",
+            "Asana"
+        ],
+        "responsibilities": "Manage and execute key functions of Project Manager.",
+        "salary_range": "$127,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_16",
+        "title": "Business Analyst",
+        "description": "A professional responsible for tasks related to Business Analyst in the Business industry.",
+        "required_skills": [
+            "Requirements Gathering",
+            "SQL",
+            "Process Modeling"
+        ],
+        "tools": [
+            "Visio",
+            "Tableau"
+        ],
+        "responsibilities": "Manage and execute key functions of Business Analyst.",
+        "salary_range": "$140,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_17",
+        "title": "Financial Analyst",
+        "description": "A professional responsible for tasks related to Financial Analyst in the Finance industry.",
+        "required_skills": [
+            "Excel",
+            "Financial Modeling",
+            "Forecasting"
+        ],
+        "tools": [
+            "Bloomberg Terminal",
+            "QuickBooks"
+        ],
+        "responsibilities": "Manage and execute key functions of Financial Analyst.",
+        "salary_range": "$128,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_18",
+        "title": "Accountant",
+        "description": "A professional responsible for tasks related to Accountant in the Finance industry.",
+        "required_skills": [
+            "Taxation",
+            "Auditing",
+            "GAAP"
+        ],
+        "tools": [
+            "SAP",
+            "QuickBooks",
+            "Xero"
+        ],
+        "responsibilities": "Manage and execute key functions of Accountant.",
+        "salary_range": "$164,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_19",
+        "title": "Investment Banker",
+        "description": "A professional responsible for tasks related to Investment Banker in the Finance industry.",
+        "required_skills": [
+            "Valuation",
+            "Mergers & Acquisitions",
+            "Modeling"
+        ],
+        "tools": [
+            "Capital IQ",
+            "FactSet"
+        ],
+        "responsibilities": "Manage and execute key functions of Investment Banker.",
+        "salary_range": "$150,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_20",
+        "title": "Marketing Manager",
+        "description": "A professional responsible for tasks related to Marketing Manager in the Marketing industry.",
+        "required_skills": [
+            "SEO",
+            "Content Strategy",
+            "Branding",
+            "Digital Ads"
+        ],
+        "tools": [
+            "Google Analytics",
+            "HubSpot",
+            "Mailchimp"
+        ],
+        "responsibilities": "Manage and execute key functions of Marketing Manager.",
+        "salary_range": "$135,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_21",
+        "title": "SEO Specialist",
+        "description": "A professional responsible for tasks related to SEO Specialist in the Marketing industry.",
+        "required_skills": [
+            "Keyword Research",
+            "Link Building",
+            "Analytics"
+        ],
+        "tools": [
+            "SEMrush",
+            "Ahrefs",
+            "Google Search Console"
+        ],
+        "responsibilities": "Manage and execute key functions of SEO Specialist.",
+        "salary_range": "$134,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_22",
+        "title": "Content Writer",
+        "description": "A professional responsible for tasks related to Content Writer in the Media industry.",
+        "required_skills": [
+            "Copywriting",
+            "Editing",
+            "Research",
+            "Storytelling"
+        ],
+        "tools": [
+            "WordPress",
+            "Grammarly"
+        ],
+        "responsibilities": "Manage and execute key functions of Content Writer.",
+        "salary_range": "$90,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_23",
+        "title": "Journalist",
+        "description": "A professional responsible for tasks related to Journalist in the Media industry.",
+        "required_skills": [
+            "Reporting",
+            "Interviewing",
+            "Ethics"
+        ],
+        "tools": [
+            "Recording Tools",
+            "CMS"
+        ],
+        "responsibilities": "Manage and execute key functions of Journalist.",
+        "salary_range": "$115,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_24",
+        "title": "Public Relations Specialist",
+        "description": "A professional responsible for tasks related to Public Relations Specialist in the Media industry.",
+        "required_skills": [
+            "Media Relations",
+            "Crisis Mgmt",
+            "Writing"
+        ],
+        "tools": [
+            "Cision",
+            "Social Media"
+        ],
+        "responsibilities": "Manage and execute key functions of Public Relations Specialist.",
+        "salary_range": "$187,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_25",
+        "title": "Sales Manager",
+        "description": "A professional responsible for tasks related to Sales Manager in the Sales industry.",
+        "required_skills": [
+            "Negotiation",
+            "CRM",
+            "Lead Gen",
+            "Closing"
+        ],
+        "tools": [
+            "Salesforce",
+            "LinkedIn Sales Nav"
+        ],
+        "responsibilities": "Manage and execute key functions of Sales Manager.",
+        "salary_range": "$109,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_26",
+        "title": "Real Estate Agent",
+        "description": "A professional responsible for tasks related to Real Estate Agent in the Real Estate industry.",
+        "required_skills": [
+            "Negotiation",
+            "Property Law",
+            "Marketing"
+        ],
+        "tools": [
+            "Zillow",
+            "MLS"
+        ],
+        "responsibilities": "Manage and execute key functions of Real Estate Agent.",
+        "salary_range": "$168,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_27",
+        "title": "Civil Engineer",
+        "description": "A professional responsible for tasks related to Civil Engineer in the Engineering industry.",
+        "required_skills": [
+            "AutoCAD",
+            "Structural Analysis",
+            "Project Mgmt"
+        ],
+        "tools": [
+            "Revit",
+            "MS Project"
+        ],
+        "responsibilities": "Manage and execute key functions of Civil Engineer.",
+        "salary_range": "$183,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_28",
+        "title": "Mechanical Engineer",
+        "description": "A professional responsible for tasks related to Mechanical Engineer in the Engineering industry.",
+        "required_skills": [
+            "CAD",
+            "Thermodynamics",
+            " Mechanics"
+        ],
+        "tools": [
+            "SolidWorks",
+            "ANSYS"
+        ],
+        "responsibilities": "Manage and execute key functions of Mechanical Engineer.",
+        "salary_range": "$115,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_29",
+        "title": "Electrical Engineer",
+        "description": "A professional responsible for tasks related to Electrical Engineer in the Engineering industry.",
+        "required_skills": [
+            "Circuit Design",
+            "MATLAB",
+            "PLC"
+        ],
+        "tools": [
+            "Multisim",
+            "Oscilloscope"
+        ],
+        "responsibilities": "Manage and execute key functions of Electrical Engineer.",
+        "salary_range": "$127,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_30",
+        "title": "Chemical Engineer",
+        "description": "A professional responsible for tasks related to Chemical Engineer in the Engineering industry.",
+        "required_skills": [
+            "Process Design",
+            "Chemistry",
+            "Safety"
+        ],
+        "tools": [
+            "Aspen Plus",
+            "MATLAB"
+        ],
+        "responsibilities": "Manage and execute key functions of Chemical Engineer.",
+        "salary_range": "$125,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_31",
+        "title": "Biomedical Engineer",
+        "description": "A professional responsible for tasks related to Biomedical Engineer in the Healthcare industry.",
+        "required_skills": [
+            "Medical Devices",
+            "Biology",
+            "CAD"
+        ],
+        "tools": [
+            "3D Printers",
+            "Lab Equipment"
+        ],
+        "responsibilities": "Manage and execute key functions of Biomedical Engineer.",
+        "salary_range": "$109,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_32",
+        "title": "Doctor (GP)",
+        "description": "A professional responsible for tasks related to Doctor (GP) in the Healthcare industry.",
+        "required_skills": [
+            "Diagnosis",
+            "Patient Care",
+            "Medicine"
+        ],
+        "tools": [
+            "EMR Systems",
+            "Stethoscope"
+        ],
+        "responsibilities": "Manage and execute key functions of Doctor (GP).",
+        "salary_range": "$167,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_33",
+        "title": "Nurse",
+        "description": "A professional responsible for tasks related to Nurse in the Healthcare industry.",
+        "required_skills": [
+            "Patient Care",
+            "IV",
+            "EMR",
+            "Critical Thinking"
+        ],
+        "tools": [
+            "Medical Equipment",
+            "Epic Systems"
+        ],
+        "responsibilities": "Manage and execute key functions of Nurse.",
+        "salary_range": "$143,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_34",
+        "title": "Pharmacist",
+        "description": "A professional responsible for tasks related to Pharmacist in the Healthcare industry.",
+        "required_skills": [
+            "Pharmacology",
+            "Dispensing",
+            "Patient Counseling"
+        ],
+        "tools": [
+            "Pharmacy Softwares"
+        ],
+        "responsibilities": "Manage and execute key functions of Pharmacist.",
+        "salary_range": "$73,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_35",
+        "title": "Psychologist",
+        "description": "A professional responsible for tasks related to Psychologist in the Healthcare industry.",
+        "required_skills": [
+            "Therapy",
+            "Assessment",
+            "Empathy"
+        ],
+        "tools": [
+            "Assessment Tools"
+        ],
+        "responsibilities": "Manage and execute key functions of Psychologist.",
+        "salary_range": "$125,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_36",
+        "title": "Lawyer",
+        "description": "A professional responsible for tasks related to Lawyer in the Legal industry.",
+        "required_skills": [
+            "Legal Research",
+            "Litigation",
+            "Drafting"
+        ],
+        "tools": [
+            "Westlaw",
+            "LexisNexis"
+        ],
+        "responsibilities": "Manage and execute key functions of Lawyer.",
+        "salary_range": "$132,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_37",
+        "title": "Paralegal",
+        "description": "A professional responsible for tasks related to Paralegal in the Legal industry.",
+        "required_skills": [
+            "Research",
+            "Filing",
+            "Drafting"
+        ],
+        "tools": [
+            "Clio",
+            "MyCase"
+        ],
+        "responsibilities": "Manage and execute key functions of Paralegal.",
+        "salary_range": "$74,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_38",
+        "title": "Teacher (High School)",
+        "description": "A professional responsible for tasks related to Teacher (High School) in the Education industry.",
+        "required_skills": [
+            "Curriculum Dev",
+            "Classroom Mgmt"
+        ],
+        "tools": [
+            "Blackboard",
+            "Zoom"
+        ],
+        "responsibilities": "Manage and execute key functions of Teacher (High School).",
+        "salary_range": "$154,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_39",
+        "title": "Professor",
+        "description": "A professional responsible for tasks related to Professor in the Education industry.",
+        "required_skills": [
+            "Research",
+            "Publishing",
+            "Teaching"
+        ],
+        "tools": [
+            "SPSS",
+            "Turnitin"
+        ],
+        "responsibilities": "Manage and execute key functions of Professor.",
+        "salary_range": "$65,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_40",
+        "title": "Instructional Designer",
+        "description": "A professional responsible for tasks related to Instructional Designer in the Education industry.",
+        "required_skills": [
+            "E-learning",
+            "Storyline",
+            "Pedagogy"
+        ],
+        "tools": [
+            "Articulate 360",
+            "Camtasia"
+        ],
+        "responsibilities": "Manage and execute key functions of Instructional Designer.",
+        "salary_range": "$197,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_41",
+        "title": "Chef",
+        "description": "A professional responsible for tasks related to Chef in the Hospitality industry.",
+        "required_skills": [
+            "Cooking Techniques",
+            "Menu Planning",
+            "Kitchen Mgmt"
+        ],
+        "tools": [
+            "Knives",
+            "Commercial Ovens"
+        ],
+        "responsibilities": "Manage and execute key functions of Chef.",
+        "salary_range": "$51,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_42",
+        "title": "Hotel Manager",
+        "description": "A professional responsible for tasks related to Hotel Manager in the Hospitality industry.",
+        "required_skills": [
+            "Operations",
+            "Guest Services",
+            "Budgeting"
+        ],
+        "tools": [
+            "Opera PMS"
+        ],
+        "responsibilities": "Manage and execute key functions of Hotel Manager.",
+        "salary_range": "$57,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_43",
+        "title": "Event Planner",
+        "description": "A professional responsible for tasks related to Event Planner in the Hospitality industry.",
+        "required_skills": [
+            "Vendor Mgmt",
+            "Budgeting",
+            "Logistics"
+        ],
+        "tools": [
+            "Cvent",
+            "Eventbrite"
+        ],
+        "responsibilities": "Manage and execute key functions of Event Planner.",
+        "salary_range": "$97,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_44",
+        "title": "Pilot",
+        "description": "A professional responsible for tasks related to Pilot in the Aviation industry.",
+        "required_skills": [
+            "Avionics",
+            "Navigation",
+            "Safety"
+        ],
+        "tools": [
+            "Flight Simulator",
+            "GPS"
+        ],
+        "responsibilities": "Manage and execute key functions of Pilot.",
+        "salary_range": "$195,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_45",
+        "title": "Flight Attendant",
+        "description": "A professional responsible for tasks related to Flight Attendant in the Aviation industry.",
+        "required_skills": [
+            "Safety Procedures",
+            "Customer Service"
+        ],
+        "tools": [
+            "Safety Equipment"
+        ],
+        "responsibilities": "Manage and execute key functions of Flight Attendant.",
+        "salary_range": "$120,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_46",
+        "title": "Automotive Mechanic",
+        "description": "A professional responsible for tasks related to Automotive Mechanic in the Automotive industry.",
+        "required_skills": [
+            "Engine Repair",
+            "Diagnostics"
+        ],
+        "tools": [
+            "OBD Scanner",
+            "Hydraulic Lifts"
+        ],
+        "responsibilities": "Manage and execute key functions of Automotive Mechanic.",
+        "salary_range": "$142,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_47",
+        "title": "Electrician",
+        "description": "A professional responsible for tasks related to Electrician in the Trades industry.",
+        "required_skills": [
+            "Wiring",
+            "Blueprint Reading",
+            "Safety"
+        ],
+        "tools": [
+            "Multimeter",
+            "Conduit Benders"
+        ],
+        "responsibilities": "Manage and execute key functions of Electrician.",
+        "salary_range": "$102,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_48",
+        "title": "Plumber",
+        "description": "A professional responsible for tasks related to Plumber in the Trades industry.",
+        "required_skills": [
+            "Pipe Fitting",
+            "Blueprints",
+            "Troubleshooting"
+        ],
+        "tools": [
+            "Pipe Wrench",
+            "Video Inspection"
+        ],
+        "responsibilities": "Manage and execute key functions of Plumber.",
+        "salary_range": "$100,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_49",
+        "title": "Carpenter",
+        "description": "A professional responsible for tasks related to Carpenter in the Trades industry.",
+        "required_skills": [
+            "Woodworking",
+            "Measurements",
+            "Framing"
+        ],
+        "tools": [
+            "Saws",
+            "Drills",
+            "Levels"
+        ],
+        "responsibilities": "Manage and execute key functions of Carpenter.",
+        "salary_range": "$82,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_50",
+        "title": "HVAC Technician",
+        "description": "A professional responsible for tasks related to HVAC Technician in the Trades industry.",
+        "required_skills": [
+            "Refrigeration",
+            "Electrical",
+            "Troubleshooting"
+        ],
+        "tools": [
+            "Manifold Gauges",
+            "Thermometers"
+        ],
+        "responsibilities": "Manage and execute key functions of HVAC Technician.",
+        "salary_range": "$127,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_51",
+        "title": "Fashion Designer",
+        "description": "A professional responsible for tasks related to Fashion Designer in the Fashion industry.",
+        "required_skills": [
+            "Sketching",
+            "Sewing",
+            "Textiles"
+        ],
+        "tools": [
+            "Sewing Machine",
+            "Adobe Illustrator"
+        ],
+        "responsibilities": "Manage and execute key functions of Fashion Designer.",
+        "salary_range": "$82,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_52",
+        "title": "Interior Designer",
+        "description": "A professional responsible for tasks related to Interior Designer in the Design industry.",
+        "required_skills": [
+            "Space Planning",
+            "CAD",
+            "Color Theory"
+        ],
+        "tools": [
+            "AutoCAD",
+            "SketchUp"
+        ],
+        "responsibilities": "Manage and execute key functions of Interior Designer.",
+        "salary_range": "$52,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_53",
+        "title": "Animator",
+        "description": "A professional responsible for tasks related to Animator in the Entertainment industry.",
+        "required_skills": [
+            "3D Modeling",
+            "Rigging",
+            "Storytelling"
+        ],
+        "tools": [
+            "Blender",
+            "Maya",
+            "After Effects"
+        ],
+        "responsibilities": "Manage and execute key functions of Animator.",
+        "salary_range": "$114,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_54",
+        "title": "Video Editor",
+        "description": "A professional responsible for tasks related to Video Editor in the Media industry.",
+        "required_skills": [
+            "Color Grading",
+            "Transitions",
+            "Storytelling"
+        ],
+        "tools": [
+            "Premiere Pro",
+            "DaVinci Resolve"
+        ],
+        "responsibilities": "Manage and execute key functions of Video Editor.",
+        "salary_range": "$145,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_55",
+        "title": "Data Entry Clerk",
+        "description": "A professional responsible for tasks related to Data Entry Clerk in the Admin industry.",
+        "required_skills": [
+            "Typing",
+            "Excel",
+            "Accuracy"
+        ],
+        "tools": [
+            "MS Office",
+            "Google Sheets"
+        ],
+        "responsibilities": "Manage and execute key functions of Data Entry Clerk.",
+        "salary_range": "$132,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_56",
+        "title": "Executive Assistant",
+        "description": "A professional responsible for tasks related to Executive Assistant in the Admin industry.",
+        "required_skills": [
+            "Scheduling",
+            "Communication",
+            "Travel Arrangements"
+        ],
+        "tools": [
+            "Outlook",
+            "Teams"
+        ],
+        "responsibilities": "Manage and execute key functions of Executive Assistant.",
+        "salary_range": "$176,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_57",
+        "title": "Customer Service Rep",
+        "description": "A professional responsible for tasks related to Customer Service Rep in the Support industry.",
+        "required_skills": [
+            "Problem Solving",
+            "Empathy",
+            "CRM"
+        ],
+        "tools": [
+            "Zendesk",
+            "Intercom"
+        ],
+        "responsibilities": "Manage and execute key functions of Customer Service Rep.",
+        "salary_range": "$52,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_58",
+        "title": "HR Manager",
+        "description": "A professional responsible for tasks related to HR Manager in the HR industry.",
+        "required_skills": [
+            "Recruitment",
+            "Employee Relations",
+            "Payroll"
+        ],
+        "tools": [
+            "Workday",
+            "BambooHR"
+        ],
+        "responsibilities": "Manage and execute key functions of HR Manager.",
+        "salary_range": "$128,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_59",
+        "title": "Recruiter",
+        "description": "A professional responsible for tasks related to Recruiter in the HR industry.",
+        "required_skills": [
+            "Sourcing",
+            "Interviewing",
+            "ATS"
+        ],
+        "tools": [
+            "LinkedIn Recruiter",
+            "Greenhouse"
+        ],
+        "responsibilities": "Manage and execute key functions of Recruiter.",
+        "salary_range": "$67,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_60",
+        "title": "Supply Chain Manager",
+        "description": "A professional responsible for tasks related to Supply Chain Manager in the Logistics industry.",
+        "required_skills": [
+            "Logistics",
+            "Inventory",
+            "Procurement"
+        ],
+        "tools": [
+            "SAP SCM",
+            "Oracle"
+        ],
+        "responsibilities": "Manage and execute key functions of Supply Chain Manager.",
+        "salary_range": "$114,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_61",
+        "title": "Logistics Coordinator",
+        "description": "A professional responsible for tasks related to Logistics Coordinator in the Logistics industry.",
+        "required_skills": [
+            "Shipping",
+            "Scheduling",
+            "Tracking"
+        ],
+        "tools": [
+            "SAP",
+            "TMS"
+        ],
+        "responsibilities": "Manage and execute key functions of Logistics Coordinator.",
+        "salary_range": "$167,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_62",
+        "title": "Quality Assurance Analyst",
+        "description": "A professional responsible for tasks related to Quality Assurance Analyst in the Tech industry.",
+        "required_skills": [
+            "Testing",
+            "Bug Tracking",
+            "Automation"
+        ],
+        "tools": [
+            "Selenium",
+            "JIRA"
+        ],
+        "responsibilities": "Manage and execute key functions of Quality Assurance Analyst.",
+        "salary_range": "$196,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_63",
+        "title": "Scrum Master",
+        "description": "A professional responsible for tasks related to Scrum Master in the Tech industry.",
+        "required_skills": [
+            "Agile",
+            "Facilitation",
+            "JIRA"
+        ],
+        "tools": [
+            "Confluence",
+            "Trello"
+        ],
+        "responsibilities": "Manage and execute key functions of Scrum Master.",
+        "salary_range": "$124,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_64",
+        "title": "Technical Writer",
+        "description": "A professional responsible for tasks related to Technical Writer in the Tech industry.",
+        "required_skills": [
+            "Documentation",
+            "API Knowledge",
+            "Markdown"
+        ],
+        "tools": [
+            "MadCap Flare",
+            "GitBook"
+        ],
+        "responsibilities": "Manage and execute key functions of Technical Writer.",
+        "salary_range": "$142,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_65",
+        "title": "Geologist",
+        "description": "A professional responsible for tasks related to Geologist in the Science industry.",
+        "required_skills": [
+            "Field Work",
+            "GIS",
+            "Mapping"
+        ],
+        "tools": [
+            "Petrel",
+            "ArcGIS"
+        ],
+        "responsibilities": "Manage and execute key functions of Geologist.",
+        "salary_range": "$69,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_66",
+        "title": "Environmental Scientist",
+        "description": "A professional responsible for tasks related to Environmental Scientist in the Science industry.",
+        "required_skills": [
+            "Data Collection",
+            "Regulations",
+            "GIS"
+        ],
+        "tools": [
+            "GIS",
+            "Statistical Softwares"
+        ],
+        "responsibilities": "Manage and execute key functions of Environmental Scientist.",
+        "salary_range": "$113,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_67",
+        "title": "Biologist",
+        "description": "A professional responsible for tasks related to Biologist in the Science industry.",
+        "required_skills": [
+            "Lab Techniques",
+            "Research",
+            "DNA Sequencing"
+        ],
+        "tools": [
+            "Microscopes",
+            "PCR Machines"
+        ],
+        "responsibilities": "Manage and execute key functions of Biologist.",
+        "salary_range": "$58,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_68",
+        "title": "Physicist",
+        "description": "A professional responsible for tasks related to Physicist in the Science industry.",
+        "required_skills": [
+            "Math",
+            "Research",
+            "Modeling"
+        ],
+        "tools": [
+            "MATLAB",
+            "Python"
+        ],
+        "responsibilities": "Manage and execute key functions of Physicist.",
+        "salary_range": "$183,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_69",
+        "title": "Astronomer",
+        "description": "A professional responsible for tasks related to Astronomer in the Science industry.",
+        "required_skills": [
+            "Telescopes",
+            "Data Analysis",
+            "Physics"
+        ],
+        "tools": [
+            "Python",
+            "Telescope Control"
+        ],
+        "responsibilities": "Manage and execute key functions of Astronomer.",
+        "salary_range": "$176,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_70",
+        "title": "Economist",
+        "description": "A professional responsible for tasks related to Economist in the Finance industry.",
+        "required_skills": [
+            "Econometrics",
+            "Statistics",
+            "Forecasting"
+        ],
+        "tools": [
+            "Stata",
+            "R",
+            "Excel"
+        ],
+        "responsibilities": "Manage and execute key functions of Economist.",
+        "salary_range": "$176,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_71",
+        "title": "Urban Planner",
+        "description": "A professional responsible for tasks related to Urban Planner in the Govt industry.",
+        "required_skills": [
+            "Zoning",
+            "GIS",
+            "Community Dev"
+        ],
+        "tools": [
+            "AutoCAD",
+            "ArcGIS"
+        ],
+        "responsibilities": "Manage and execute key functions of Urban Planner.",
+        "salary_range": "$118,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_72",
+        "title": "Social Worker",
+        "description": "A professional responsible for tasks related to Social Worker in the Social industry.",
+        "required_skills": [
+            "Counseling",
+            "Advocacy",
+            "Case Mgmt"
+        ],
+        "tools": [
+            "Case Management Software"
+        ],
+        "responsibilities": "Manage and execute key functions of Social Worker.",
+        "salary_range": "$96,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_73",
+        "title": "Translator",
+        "description": "A professional responsible for tasks related to Translator in the Linguistics industry.",
+        "required_skills": [
+            "Fluency",
+            "Cultural Knowledge",
+            "Writing"
+        ],
+        "tools": [
+            "CAT Tools",
+            "MemoQ"
+        ],
+        "responsibilities": "Manage and execute key functions of Translator.",
+        "salary_range": "$128,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_74",
+        "title": "Interpreter",
+        "description": "A professional responsible for tasks related to Interpreter in the Linguistics industry.",
+        "required_skills": [
+            "Listening",
+            "Speaking",
+            "Cultural Mediation"
+        ],
+        "tools": [
+            "Headsets",
+            "Booths"
+        ],
+        "responsibilities": "Manage and execute key functions of Interpreter.",
+        "salary_range": "$129,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_75",
+        "title": "Fitness Trainer",
+        "description": "A professional responsible for tasks related to Fitness Trainer in the Fitness industry.",
+        "required_skills": [
+            "Anatomy",
+            "Nutrition",
+            "Exercise Tech"
+        ],
+        "tools": [
+            "Fitness Apps",
+            "Equipment"
+        ],
+        "responsibilities": "Manage and execute key functions of Fitness Trainer.",
+        "salary_range": "$198,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_76",
+        "title": "Nutritionist",
+        "description": "A professional responsible for tasks related to Nutritionist in the Healthcare industry.",
+        "required_skills": [
+            "Diet Planning",
+            "Biology",
+            "Counseling"
+        ],
+        "tools": [
+            "Nutrition Software"
+        ],
+        "responsibilities": "Manage and execute key functions of Nutritionist.",
+        "salary_range": "$187,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_77",
+        "title": "Architect",
+        "description": "A professional responsible for tasks related to Architect in the Design industry.",
+        "required_skills": [
+            "AutoCAD",
+            "Revit",
+            "Building Codes"
+        ],
+        "tools": [
+            "Rhino",
+            "V-Ray"
+        ],
+        "responsibilities": "Manage and execute key functions of Architect.",
+        "salary_range": "$129,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_78",
+        "title": "Marine Biologist",
+        "description": "A professional responsible for tasks related to Marine Biologist in the Science industry.",
+        "required_skills": [
+            "Diving",
+            "Research",
+            "Data Analysis"
+        ],
+        "tools": [
+            "Underwater Drones",
+            "GIS"
+        ],
+        "responsibilities": "Manage and execute key functions of Marine Biologist.",
+        "salary_range": "$200,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_79",
+        "title": "Veterinarian",
+        "description": "A professional responsible for tasks related to Veterinarian in the Healthcare industry.",
+        "required_skills": [
+            "Surgery",
+            "Diagnosis",
+            "Animal Handling"
+        ],
+        "tools": [
+            "X-Ray",
+            "Surgical Tools"
+        ],
+        "responsibilities": "Manage and execute key functions of Veterinarian.",
+        "salary_range": "$69,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_80",
+        "title": "Dentist",
+        "description": "A professional responsible for tasks related to Dentist in the Healthcare industry.",
+        "required_skills": [
+            "Oral Surgery",
+            "Diagnosis",
+            "Patient Care"
+        ],
+        "tools": [
+            "Dental Drill",
+            "X-Ray"
+        ],
+        "responsibilities": "Manage and execute key functions of Dentist.",
+        "salary_range": "$168,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_81",
+        "title": "Radiologist",
+        "description": "A professional responsible for tasks related to Radiologist in the Healthcare industry.",
+        "required_skills": [
+            "Imaging",
+            "Diagnosis",
+            "Anatomy"
+        ],
+        "tools": [
+            "MRI",
+            "CT Scanner"
+        ],
+        "responsibilities": "Manage and execute key functions of Radiologist.",
+        "salary_range": "$160,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_82",
+        "title": "Paramedic",
+        "description": "A professional responsible for tasks related to Paramedic in the Healthcare industry.",
+        "required_skills": [
+            "Emergency Care",
+            "ALS",
+            "Driving"
+        ],
+        "tools": [
+            "Defibrillator",
+            "Stretcher"
+        ],
+        "responsibilities": "Manage and execute key functions of Paramedic.",
+        "salary_range": "$125,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_83",
+        "title": "Forensic Scientist",
+        "description": "A professional responsible for tasks related to Forensic Scientist in the Science industry.",
+        "required_skills": [
+            "Evidence Analysis",
+            "Lab Techniques"
+        ],
+        "tools": [
+            "Microscopes",
+            "DNA Analyzers"
+        ],
+        "responsibilities": "Manage and execute key functions of Forensic Scientist.",
+        "salary_range": "$68,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_84",
+        "title": "Meteorologist",
+        "description": "A professional responsible for tasks related to Meteorologist in the Science industry.",
+        "required_skills": [
+            "Forecasting",
+            "Radar",
+            "Physics"
+        ],
+        "tools": [
+            "WRF",
+            "Python"
+        ],
+        "responsibilities": "Manage and execute key functions of Meteorologist.",
+        "salary_range": "$50,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_85",
+        "title": "Librarian",
+        "description": "A professional responsible for tasks related to Librarian in the Education industry.",
+        "required_skills": [
+            "Cataloging",
+            "Research",
+            "Organization"
+        ],
+        "tools": [
+            "ILS",
+            "Dewey Decimal"
+        ],
+        "responsibilities": "Manage and execute key functions of Librarian.",
+        "salary_range": "$121,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_86",
+        "title": "Archivist",
+        "description": "A professional responsible for tasks related to Archivist in the Culture industry.",
+        "required_skills": [
+            "Preservation",
+            "Digitization"
+        ],
+        "tools": [
+            "Archival Software"
+        ],
+        "responsibilities": "Manage and execute key functions of Archivist.",
+        "salary_range": "$100,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_87",
+        "title": "Museum Curator",
+        "description": "A professional responsible for tasks related to Museum Curator in the Culture industry.",
+        "required_skills": [
+            "Art History",
+            "Management",
+            "Research"
+        ],
+        "tools": [
+            "Collection Mgmt SW"
+        ],
+        "responsibilities": "Manage and execute key functions of Museum Curator.",
+        "salary_range": "$139,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_88",
+        "title": "Art Director",
+        "description": "A professional responsible for tasks related to Art Director in the Design industry.",
+        "required_skills": [
+            "Visual Style",
+            "Team Lead",
+            "Branding"
+        ],
+        "tools": [
+            "Photoshop",
+            "InDesign"
+        ],
+        "responsibilities": "Manage and execute key functions of Art Director.",
+        "salary_range": "$82,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_89",
+        "title": "Sound Engineer",
+        "description": "A professional responsible for tasks related to Sound Engineer in the Media industry.",
+        "required_skills": [
+            "Mixing",
+            "Mastering",
+            "Audio Edit"
+        ],
+        "tools": [
+            "Pro Tools",
+            "Logic Pro"
+        ],
+        "responsibilities": "Manage and execute key functions of Sound Engineer.",
+        "salary_range": "$81,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_90",
+        "title": "Broadcast Journalist",
+        "description": "A professional responsible for tasks related to Broadcast Journalist in the Media industry.",
+        "required_skills": [
+            "Reporting",
+            "Voice Modulation",
+            "Research"
+        ],
+        "tools": [
+            "Teleprompter",
+            "Mic"
+        ],
+        "responsibilities": "Manage and execute key functions of Broadcast Journalist.",
+        "salary_range": "$189,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    },
+    {
+        "id": "career_91",
+        "title": "Social Media Manager",
+        "description": "A professional responsible for tasks related to Social Media Manager in the Marketing industry.",
+        "required_skills": [
+            "Content Creation",
+            "Analytics",
+            "Engagement"
+        ],
+        "tools": [
+            "Hootsuite",
+            "Buffer"
+        ],
+        "responsibilities": "Manage and execute key functions of Social Media Manager.",
+        "salary_range": "$150,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_92",
+        "title": "Insurance Agent",
+        "description": "A professional responsible for tasks related to Insurance Agent in the Finance industry.",
+        "required_skills": [
+            "Risk Assessment",
+            "Sales",
+            "Underwriting"
+        ],
+        "tools": [
+            "Agency Management SW"
+        ],
+        "responsibilities": "Manage and execute key functions of Insurance Agent.",
+        "salary_range": "$103,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_93",
+        "title": "Loan Officer",
+        "description": "A professional responsible for tasks related to Loan Officer in the Finance industry.",
+        "required_skills": [
+            "Underwriting",
+            "Customer Service",
+            "Analysis"
+        ],
+        "tools": [
+            "Loan Origination SW"
+        ],
+        "responsibilities": "Manage and execute key functions of Loan Officer.",
+        "salary_range": "$169,000 per year",
+        "future_scope": "Stable career path with consistent opportunities.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_94",
+        "title": "Compliance Officer",
+        "description": "A professional responsible for tasks related to Compliance Officer in the Finance industry.",
+        "required_skills": [
+            "Regulations",
+            "Audit",
+            "Risk Mgmt"
+        ],
+        "tools": [
+            "Compliance Software"
+        ],
+        "responsibilities": "Manage and execute key functions of Compliance Officer.",
+        "salary_range": "$142,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_95",
+        "title": "Operations Manager",
+        "description": "A professional responsible for tasks related to Operations Manager in the Business industry.",
+        "required_skills": [
+            "Process Improvement",
+            "Logistics",
+            "HR"
+        ],
+        "tools": [
+            "SAP",
+            "ERP Systems"
+        ],
+        "responsibilities": "Manage and execute key functions of Operations Manager.",
+        "salary_range": "$61,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_96",
+        "title": "Training Specialist",
+        "description": "A professional responsible for tasks related to Training Specialist in the HR industry.",
+        "required_skills": [
+            "Curriculum Dev",
+            "Public Speaking"
+        ],
+        "tools": [
+            "Zoom",
+            "LMS"
+        ],
+        "responsibilities": "Manage and execute key functions of Training Specialist.",
+        "salary_range": "$193,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_97",
+        "title": "Help Desk Technician",
+        "description": "A professional responsible for tasks related to Help Desk Technician in the Support industry.",
+        "required_skills": [
+            "Troubleshooting",
+            "Windows",
+            "Linux"
+        ],
+        "tools": [
+            "TeamViewer",
+            "ServiceNow"
+        ],
+        "responsibilities": "Manage and execute key functions of Help Desk Technician.",
+        "salary_range": "$84,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_98",
+        "title": "Web Administrator",
+        "description": "A professional responsible for tasks related to Web Administrator in the Tech industry.",
+        "required_skills": [
+            "CMS",
+            "HTML",
+            "Server Mgmt"
+        ],
+        "tools": [
+            "cPanel",
+            "WordPress"
+        ],
+        "responsibilities": "Manage and execute key functions of Web Administrator.",
+        "salary_range": "$69,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_99",
+        "title": "AI Ethics Officer",
+        "description": "A professional responsible for tasks related to AI Ethics Officer in the Tech industry.",
+        "required_skills": [
+            "Ethics",
+            "Policy Making",
+            "AI Knowledge"
+        ],
+        "tools": [
+            "Compliance Tools"
+        ],
+        "responsibilities": "Manage and execute key functions of AI Ethics Officer.",
+        "salary_range": "$64,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Collaborating with teams and clients."
+    },
+    {
+        "id": "career_100",
+        "title": "Blockchain Developer",
+        "description": "A professional responsible for tasks related to Blockchain Developer in the Tech industry.",
+        "required_skills": [
+            "Solidity",
+            "Cryptography",
+            "Smart Contracts"
+        ],
+        "tools": [
+            "Remix IDE",
+            "Ganache"
+        ],
+        "responsibilities": "Manage and execute key functions of Blockchain Developer.",
+        "salary_range": "$111,000 per year",
+        "future_scope": "Growing steadily with technological advancements.",
+        "day_in_life": "Research, analysis, and reporting."
+    },
+    {
+        "id": "career_101",
+        "title": "Game Designer",
+        "description": "A professional responsible for tasks related to Game Designer in the Gaming industry.",
+        "required_skills": [
+            "Level Design",
+            "Storytelling",
+            "Unity"
+        ],
+        "tools": [
+            "Unreal Engine",
+            "Unity"
+        ],
+        "responsibilities": "Manage and execute key functions of Game Designer.",
+        "salary_range": "$57,000 per year",
+        "future_scope": "High demand expected in the next decade.",
+        "day_in_life": "Hands-on work with tools and technology."
+    },
+    {
+        "id": "career_102",
+        "title": "Robotics Engineer",
+        "description": "A professional responsible for tasks related to Robotics Engineer in the Engineering industry.",
+        "required_skills": [
+            "ROS",
+            "C++",
+            "Electronics"
+        ],
+        "tools": [
+            "SolidWorks",
+            "Gazebo"
+        ],
+        "responsibilities": "Manage and execute key functions of Robotics Engineer.",
+        "salary_range": "$114,000 per year",
+        "future_scope": "Rapidly evolving field with high growth potential.",
+        "day_in_life": "Meetings, planning, and executing core tasks."
+    }
 ]
