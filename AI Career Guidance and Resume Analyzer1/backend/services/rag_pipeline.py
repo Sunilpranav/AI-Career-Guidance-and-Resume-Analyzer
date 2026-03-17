@@ -14,6 +14,7 @@ def get_embedding(text):
         response = ollama.embed(model=ai_engine.MODEL_NAME, input=text)
         if 'embeddings' in response and len(response['embeddings']) > 0:
             return response['embeddings'][0]
+        
         # Fallback
         response = ollama.embeddings(model=ai_engine.MODEL_NAME, prompt=text)
         if 'embedding' in response:
@@ -22,12 +23,11 @@ def get_embedding(text):
         print(f"Embedding Error: {e}")
     return None
 
-def retrieve_relevant_careers(query_text, n_results=5):
+def retrieve_relevant_careers(query_text, n_results=3):
     query_embedding = get_embedding(query_text)
     
-    # Default empty structure
     empty_result = {'documents': [[]], 'metadatas': [[]], 'ids': [[]]}
-
+    
     if query_embedding is None:
         return empty_result
 
@@ -37,10 +37,11 @@ def retrieve_relevant_careers(query_text, n_results=5):
             n_results=n_results
         )
         
-        # Validate results
-        if not results or not results.get('documents') or len(results['documents'][0]) == 0:
-            return empty_result
-            
+        # Safety Check: Ensure structure is valid
+        if not results: return empty_result
+        if not results.get('documents'): return empty_result
+        if len(results['documents']) == 0: return empty_result
+        
         return results
     except Exception as e:
         print(f"Query Error: {e}")
