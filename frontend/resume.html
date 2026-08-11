@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Analyzer — CareerAI</title>
+  <meta name="description" content="Upload your resume for AI-powered ATS scoring, skill extraction, and career recommendations."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"/>
+  <link rel="stylesheet" href="/css/variables.css"/>
+  <link rel="stylesheet" href="/css/global.css"/>
+  <link rel="stylesheet" href="/css/components.css"/>
+  <link rel="stylesheet" href="/css/resume.css"/>
+  <link rel="stylesheet" href="/css/responsive.css"/>
+</head>
+<body>
+<div id="toast-container" class="toast-container"></div>
+
+<div class="app-layout">
+  <!-- Sidebar injected by layout.js -->
+  <main class="main-content">
+    <div class="page-content">
+
+      <div class="page-header fade-in">
+        <h1>Resume Analyzer</h1>
+        <p>Upload your resume to get an ATS score, skill extraction, and AI-powered career recommendations.</p>
+      </div>
+
+      <div class="two-col-grid">
+
+        <!-- Upload Column -->
+        <div class="fade-in">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" width="18" height="18"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </div>
+              <div>
+                <div class="card-title">Upload Resume</div>
+                <div class="card-subtitle">PDF or DOCX · Max 10 MB</div>
+              </div>
+            </div>
+
+            <div id="file-error" class="alert alert-danger hidden mb-3" role="alert" aria-live="polite"></div>
+
+            <div id="drop-zone" class="drop-zone" role="button" tabindex="0" aria-label="Click or drag to upload your resume">
+              <span class="dz-icon">☁</span>
+              <span class="dz-title">Click to upload or drag & drop</span>
+              <span class="dz-sub">Supports PDF and DOCX files</span>
+              <input type="file" id="file-input" accept=".pdf,.docx" style="display:none" aria-label="Resume file"/>
+            </div>
+
+            <div id="file-selected" class="dz-selected hidden mt-3">
+              <span>✓</span><span></span>
+            </div>
+
+            <div class="form-group mt-4">
+              <label class="form-label" for="target-role">Target Role <span class="text-muted" style="font-weight:400;text-transform:none">(optional)</span></label>
+              <input type="text" id="target-role" class="form-input" placeholder="e.g. Senior Backend Engineer" maxlength="120"/>
+            </div>
+
+            <button id="analyze-btn" class="btn btn-primary btn-full btn-lg mt-4" disabled>
+              ✨ Analyze Resume
+            </button>
+          </div>
+
+          <!-- Tips Card -->
+          <div class="card mt-4">
+            <div class="card-title mb-3">💡 Resume Tips</div>
+            <ul class="result-list list-strengths">
+              <li>Use a clean, ATS-friendly format (no tables or images)</li>
+              <li>Include measurable achievements (e.g. "Improved performance by 40%")</li>
+              <li>Match keywords from the job description</li>
+              <li>Keep it to 1-2 pages maximum</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Results Column -->
+        <div>
+          <!-- Loading Panel -->
+          <div id="loading-panel" class="card loading-panel hidden">
+            <div class="spinner spinner-lg"></div>
+            <div class="loading-msg">Analyzing your resume with AI…</div>
+            <div class="loading-steps">
+              <div class="loading-step">Extracting text from file</div>
+              <div class="loading-step">Running ATS analysis</div>
+              <div class="loading-step">Extracting skills with AI</div>
+              <div class="loading-step">Matching career paths</div>
+            </div>
+          </div>
+
+          <!-- Results -->
+          <div id="results-section" class="hidden">
+            <!-- ATS Score -->
+            <div class="ats-result-card fade-in mb-4">
+              <div class="ats-score-ring">
+                <svg viewBox="0 0 120 120">
+                  <circle class="ats-ring-bg" cx="60" cy="60" r="54"/>
+                  <circle id="ats-ring-fill" class="ats-ring-fill" cx="60" cy="60" r="54"
+                          style="stroke-dashoffset:339; stroke:#6366f1"/>
+                </svg>
+                <div class="ats-score-center">
+                  <span id="ats-num" class="ats-score-num">0</span>
+                  <span class="ats-score-denom">/ 100</span>
+                </div>
+              </div>
+              <div>
+                <div id="ats-label" class="badge badge-primary mb-2" style="font-size:0.82rem">ATS Score</div>
+                <div id="ats-summary" class="ats-score-summary"></div>
+              </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="card mb-4 fade-in">
+              <div class="result-section-header">
+                <span class="result-section-icon">🛠</span>
+                <span class="fw-700">Detected Skills</span>
+              </div>
+              <div id="skills-container" class="skills-container"></div>
+            </div>
+
+            <!-- Strengths -->
+            <div class="card mb-4 fade-in">
+              <div class="result-section-header" style="color:var(--success)">
+                <span class="result-section-icon">✦</span>
+                <span class="fw-700">Strengths</span>
+              </div>
+              <ul id="strengths-list" class="result-list list-strengths"></ul>
+            </div>
+
+            <!-- Gaps -->
+            <div class="card mb-4 fade-in">
+              <div class="result-section-header" style="color:var(--warning)">
+                <span class="result-section-icon">◈</span>
+                <span class="fw-700">Gaps & Missing Keywords</span>
+              </div>
+              <ul id="gaps-list" class="result-list list-gaps"></ul>
+            </div>
+
+            <!-- Suggestions -->
+            <div class="card mb-4 fade-in">
+              <div class="result-section-header" style="color:var(--primary)">
+                <span class="result-section-icon">→</span>
+                <span class="fw-700">Rewrite Suggestions</span>
+              </div>
+              <ul id="suggestions-list" class="result-list list-suggestions"></ul>
+            </div>
+
+            <!-- Career Matches -->
+            <div class="card mb-4 fade-in">
+              <div class="card-header">
+                <div class="card-icon">💼</div>
+                <div>
+                  <div class="card-title">Career Matches</div>
+                  <div class="card-subtitle">Sorted by skill alignment</div>
+                </div>
+              </div>
+              <div id="career-matches" style="display:grid;grid-template-columns:1fr 1fr;gap:12px"></div>
+            </div>
+          </div>
+
+          <!-- Empty state -->
+          <div class="card">
+            <div id="empty-state" class="empty-state">
+              <div class="empty-icon">📄</div>
+              <div class="empty-title">No resume analyzed yet</div>
+              <div class="empty-text">Upload your resume on the left to get your ATS score and career recommendations.</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /two-col-grid -->
+    </div>
+  </main>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/layout.js"></script>
+<script src="/js/resume.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    layout.init('resume', 'Resume Analyzer', 'Upload and analyze your resume');
+    // Hide empty state when results load
+    const observer = new MutationObserver(() => {
+      const empty = document.getElementById('empty-state');
+      const results = document.getElementById('results-section');
+      if (empty && results && !results.classList.contains('hidden')) {
+        empty.closest('.card')?.classList.add('hidden');
+      }
+    });
+    const results = document.getElementById('results-section');
+    if (results) observer.observe(results, { attributes: true, attributeFilter: ['class'] });
+  });
+</script>
+</body>
+</html>

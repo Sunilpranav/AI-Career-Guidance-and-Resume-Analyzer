@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Career Detail — CareerAI</title>
+  <meta name="description" content="Explore career details, skill requirements, salary ranges, and get a personalized skill gap analysis."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"/>
+  <link rel="stylesheet" href="/css/variables.css"/>
+  <link rel="stylesheet" href="/css/global.css"/>
+  <link rel="stylesheet" href="/css/components.css"/>
+  <link rel="stylesheet" href="/css/careers.css"/>
+  <link rel="stylesheet" href="/css/responsive.css"/>
+</head>
+<body>
+<div id="toast-container" class="toast-container"></div>
+
+<div class="app-layout">
+  <main class="main-content">
+    <div class="page-content">
+
+      <div class="mb-4 fade-in">
+        <a href="/careers.html" class="btn btn-ghost btn-sm">← Back to Careers</a>
+      </div>
+
+      <!-- Loading -->
+      <div id="detail-loading" class="page-loading hidden">
+        <div class="spinner"></div> Loading career details…
+      </div>
+
+      <!-- Content (injected by careers.js) -->
+      <div id="detail-content" class="hidden fade-in"></div>
+
+      <!-- Roadmap Section -->
+      <div id="roadmap-section" class="card mt-6 hidden">
+        <div class="card-header">
+          <div class="card-icon">🗺</div>
+          <div>
+            <div class="card-title">Career Transition Roadmap</div>
+            <div class="card-subtitle">AI-generated step-by-step plan</div>
+          </div>
+        </div>
+        <div class="flex gap-3 mt-3">
+          <input type="text" id="roadmap-current" class="form-input" placeholder="Your current role (e.g. Frontend Developer)" style="flex:1"/>
+          <button id="roadmap-btn" class="btn btn-primary" onclick="handleRoadmap()">Generate Plan</button>
+        </div>
+        <div id="roadmap-result" class="mt-4"></div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/layout.js"></script>
+<script src="/js/careers.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    layout.init('careers', 'Career Detail', 'Skill requirements & growth path');
+    // Show roadmap section after detail loads
+    setTimeout(() => {
+      if (!document.getElementById('detail-content').classList.contains('hidden')) {
+        document.getElementById('roadmap-section').classList.remove('hidden');
+      }
+    }, 2000);
+  });
+
+  function handleRoadmap() {
+    const current = document.getElementById('roadmap-current').value.trim();
+    const params = new URLSearchParams(window.location.search);
+    const careerId = params.get('id');
+    // Get target from career title
+    const titleEl = document.querySelector('.career-detail-title');
+    const target = titleEl?.textContent || careerId || 'Software Engineer';
+    if (!current) { utils.showToast('Please enter your current role.', 'error'); return; }
+    generateRoadmap(current, target);
+  }
+</script>
+</body>
+</html>

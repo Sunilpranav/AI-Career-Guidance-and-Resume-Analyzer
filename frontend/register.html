@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account — CareerAI</title>
+  <meta name="description" content="Create a free CareerAI account to start analyzing your resume and discovering career paths."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"/>
+  <link rel="stylesheet" href="/css/variables.css"/>
+  <link rel="stylesheet" href="/css/global.css"/>
+  <link rel="stylesheet" href="/css/components.css"/>
+  <link rel="stylesheet" href="/css/responsive.css"/>
+</head>
+<body>
+<div id="toast-container" class="toast-container"></div>
+
+<div class="auth-layout">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div class="auth-logo-icon">🚀</div>
+      <div class="auth-logo-name">CareerAI</div>
+      <div class="auth-logo-tag">Start your career journey</div>
+    </div>
+
+    <div class="auth-title">Create your account</div>
+    <div class="auth-subtitle">Free forever · No credit card required</div>
+
+    <div id="register-error" class="auth-error hidden" role="alert" aria-live="polite">
+      <span>⚠</span><span id="register-error-text"></span>
+    </div>
+
+    <form id="register-form" class="auth-form" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="reg-name">Full name</label>
+        <input type="text" id="reg-name" class="form-input" placeholder="Jane Smith"
+               autocomplete="name" required aria-required="true"/>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="reg-email">Email address</label>
+        <input type="email" id="reg-email" class="form-input" placeholder="you@example.com"
+               autocomplete="email" required aria-required="true"/>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="reg-password">Password</label>
+        <input type="password" id="reg-password" class="form-input" placeholder="Min. 8 characters"
+               autocomplete="new-password" required aria-required="true"/>
+        <div class="password-strength">
+          <div class="strength-bar" id="bar1"></div>
+          <div class="strength-bar" id="bar2"></div>
+          <div class="strength-bar" id="bar3"></div>
+          <div class="strength-bar" id="bar4"></div>
+        </div>
+        <span id="strength-label" class="strength-label"></span>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="reg-confirm">Confirm password</label>
+        <input type="password" id="reg-confirm" class="form-input" placeholder="Repeat password"
+               autocomplete="new-password" required aria-required="true"/>
+      </div>
+
+      <button type="submit" id="register-btn" class="btn btn-primary btn-full btn-lg">
+        Create Account
+      </button>
+    </form>
+
+    <div class="divider mt-4">or</div>
+
+    <div class="text-center mt-3" style="font-size:0.85rem;color:var(--text-muted)">
+      Already have an account?
+      <a href="/login.html" class="auth-link">Sign in</a>
+    </div>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/auth.js"></script>
+<script>
+  utils.initTheme();
+  auth.redirectIfLoggedIn();
+
+  const passInput = document.getElementById('reg-password');
+  const bars = [document.getElementById('bar1'), document.getElementById('bar2'), document.getElementById('bar3'), document.getElementById('bar4')];
+  const strengthLabel = document.getElementById('strength-label');
+
+  passInput.addEventListener('input', () => {
+    const p = passInput.value;
+    let s = 0;
+    if (p.length >= 8) s++;
+    if (/[A-Z]/.test(p)) s++;
+    if (/[0-9]/.test(p)) s++;
+    if (/[^A-Za-z0-9]/.test(p)) s++;
+    bars.forEach((b, i) => {
+      b.className = 'strength-bar';
+      if (i < s) b.classList.add(s <= 1 ? 'filled-weak' : s <= 2 ? 'filled-medium' : 'filled-strong');
+    });
+    strengthLabel.textContent = ['', 'Weak', 'Fair', 'Good', 'Strong'][s] || '';
+    strengthLabel.style.color = ['', 'var(--danger)', 'var(--warning)', 'var(--success)', 'var(--success)'][s];
+  });
+
+  const errEl = document.getElementById('register-error');
+  const errText = document.getElementById('register-error-text');
+
+  document.getElementById('register-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('reg-name').value.trim();
+    const email = document.getElementById('reg-email').value.trim();
+    const pass = document.getElementById('reg-password').value;
+    const confirm = document.getElementById('reg-confirm').value;
+    errEl.classList.add('hidden');
+
+    if (pass !== confirm) { errText.textContent = 'Passwords do not match.'; errEl.classList.remove('hidden'); return; }
+    if (pass.length < 8) { errText.textContent = 'Password must be at least 8 characters.'; errEl.classList.remove('hidden'); return; }
+
+    const btn = document.getElementById('register-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner spinner-sm"></span> Creating account…';
+
+    try {
+      const data = await api.apiPost('/auth/register', { email, full_name: name, password: pass });
+      auth.saveSession(data.access_token, data.user);
+      window.location.href = '/dashboard.html';
+    } catch (err) {
+      errText.textContent = err.message;
+      errEl.classList.remove('hidden');
+      btn.disabled = false;
+      btn.innerHTML = 'Create Account';
+    }
+  });
+</script>
+</body>
+</html>

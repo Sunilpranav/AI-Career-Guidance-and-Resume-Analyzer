@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile — CareerAI</title>
+  <meta name="description" content="View and update your CareerAI profile."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"/>
+  <link rel="stylesheet" href="/css/variables.css"/>
+  <link rel="stylesheet" href="/css/global.css"/>
+  <link rel="stylesheet" href="/css/components.css"/>
+  <link rel="stylesheet" href="/css/responsive.css"/>
+</head>
+<body>
+<div id="toast-container" class="toast-container"></div>
+
+<div class="app-layout">
+  <main class="main-content">
+    <div class="page-content">
+
+      <div class="page-header fade-in">
+        <h1>Profile</h1>
+        <p>Your account information and career details.</p>
+      </div>
+
+      <div class="two-col-grid">
+        <!-- Profile Card -->
+        <div class="card fade-in">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:14px;padding:12px 0;text-align:center;border-bottom:1px solid var(--border);margin-bottom:20px">
+            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;color:white" id="profile-avatar">U</div>
+            <div>
+              <div style="font-size:1.2rem;font-weight:700;color:var(--text-primary)" id="profile-name">Loading…</div>
+              <div style="font-size:0.82rem;color:var(--text-muted)" id="profile-email">…</div>
+            </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" id="edit-name" class="form-input" readonly/>
+          </div>
+          <div class="form-group mb-4">
+            <label class="form-label">Email Address</label>
+            <input type="email" id="edit-email" class="form-input" readonly/>
+          </div>
+          <div class="alert alert-info" style="font-size:0.82rem">Profile editing will be available in a future update.</div>
+        </div>
+
+        <!-- Stats Card -->
+        <div>
+          <div class="card fade-in mb-4">
+            <div class="card-title mb-4">📊 Career Stats</div>
+            <div style="display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--border)">
+                <span class="text-secondary">Total Analyses</span>
+                <span class="fw-700" id="prof-analyses">—</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid var(--border)">
+                <span class="text-secondary">Best ATS Score</span>
+                <span class="fw-700 text-success" id="prof-best">—</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <span class="text-secondary">Member Since</span>
+                <span class="fw-600 text-muted fs-sm" id="prof-since">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card fade-in">
+            <div class="card-title mb-3">🚀 Quick Actions</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <a href="/resume.html" class="btn btn-primary btn-full">Analyze New Resume</a>
+              <a href="/careers.html" class="btn btn-secondary btn-full">Explore Careers</a>
+              <a href="/chat.html" class="btn btn-secondary btn-full">Chat with AI</a>
+              <button onclick="handleLogout()" class="btn btn-danger btn-full">Sign Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/layout.js"></script>
+<script>
+  function handleLogout() { auth.logout(); window.location.href = '/login.html'; }
+
+  document.addEventListener('DOMContentLoaded', async () => {
+    layout.init('profile', 'Profile', 'Your account information');
+    const user = auth.getUser();
+    if (user) {
+      document.getElementById('profile-name').textContent = user.full_name || '—';
+      document.getElementById('profile-email').textContent = user.email || '—';
+      document.getElementById('profile-avatar').textContent = (user.full_name || user.email || 'U')[0].toUpperCase();
+      document.getElementById('edit-name').value = user.full_name || '';
+      document.getElementById('edit-email').value = user.email || '';
+      if (user.created_at) document.getElementById('prof-since').textContent = utils.formatDate(user.created_at);
+    }
+    try {
+      const history = await api.apiGet('/analysis/history');
+      document.getElementById('prof-analyses').textContent = history.length;
+      if (history.length > 0) {
+        const best = Math.max(...history.map(r => r.ats_score));
+        document.getElementById('prof-best').textContent = Math.round(best) + '/100';
+      }
+    } catch (_) {}
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+[
+  {
+    "id": "software-engineer",
+    "title": "Software Engineer",
+    "description": "Design, develop, and maintain software systems and applications across various domains including web, mobile, and enterprise systems.",
+    "skills": ["Python", "Java", "JavaScript", "TypeScript", "C++", "Go", "Data Structures", "Algorithms", "OOP"],
+    "tools": ["Git", "Docker", "Jenkins", "VS Code", "IntelliJ IDEA", "Kubernetes", "PostgreSQL", "Redis"],
+    "responsibilities": [
+      "Write clean, maintainable, and well-tested code",
+      "Design and implement software architecture",
+      "Collaborate with cross-functional teams",
+      "Review code and mentor junior developers",
+      "Debug and resolve production issues",
+      "Participate in agile ceremonies"
+    ],
+    "salary_range": "$85,000 – $180,000 / year",
+    "future_scope": "High demand across all industries. Specializations in AI/ML, cloud, and distributed systems command premium salaries. Career path leads to Senior Engineer, Staff Engineer, or Engineering Manager."
+  },
+  {
+    "id": "data-scientist",
+    "title": "Data Scientist",
+    "description": "Extract insights from large datasets using statistical analysis, machine learning, and data visualization to drive business decisions.",
+    "skills": ["Python", "R", "Machine Learning", "Statistics", "SQL", "Data Analysis", "Feature Engineering", "Model Evaluation"],
+    "tools": ["TensorFlow", "PyTorch", "scikit-learn", "Pandas", "NumPy", "Jupyter", "Tableau", "Power BI", "Spark"],
+    "responsibilities": [
+      "Build and validate machine learning models",
+      "Perform exploratory data analysis",
+      "Create data pipelines and ETL processes",
+      "Communicate findings to stakeholders",
+      "Deploy models to production",
+      "Monitor model performance over time"
+    ],
+    "salary_range": "$95,000 – $200,000 / year",
+    "future_scope": "Explosive growth with AI adoption. Specializations in NLP, computer vision, and ML ops are especially valuable. Career leads to Senior Data Scientist, ML Engineer, or Chief Data Officer."
+  },
+  {
+    "id": "frontend-developer",
+    "title": "Frontend Developer",
+    "description": "Build user interfaces and interactive web experiences using modern frameworks, ensuring performance, accessibility, and great UX.",
+    "skills": ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Vue.js", "Angular", "Responsive Design", "Web Performance"],
+    "tools": ["Webpack", "Vite", "Figma", "Storybook", "Jest", "Cypress", "Git", "npm", "Tailwind CSS"],
+    "responsibilities": [
+      "Develop responsive and accessible UI components",
+      "Collaborate with designers and UX teams",
+      "Optimize web performance and Core Web Vitals",
+      "Integrate REST APIs and GraphQL",
+      "Write unit and integration tests",
+      "Maintain component libraries"
+    ],
+    "salary_range": "$75,000 – $160,000 / year",
+    "future_scope": "Strong demand. Full-stack transition is common. React Native enables mobile development. Web3 and WebAssembly are emerging specializations."
+  },
+  {
+    "id": "backend-developer",
+    "title": "Backend Developer",
+    "description": "Build scalable server-side applications, APIs, and database systems that power web and mobile applications.",
+    "skills": ["Python", "Java", "Node.js", "Go", "REST APIs", "GraphQL", "SQL", "NoSQL", "System Design"],
+    "tools": ["FastAPI", "Spring Boot", "Express.js", "PostgreSQL", "MongoDB", "Redis", "Docker", "Nginx", "AWS"],
+    "responsibilities": [
+      "Design and build RESTful or GraphQL APIs",
+      "Optimize database queries and schema design",
+      "Implement authentication and authorization",
+      "Build microservices and distributed systems",
+      "Write comprehensive tests",
+      "Monitor API performance and reliability"
+    ],
+    "salary_range": "$85,000 – $175,000 / year",
+    "future_scope": "Foundation of all tech products. Microservices, serverless, and event-driven architectures are key growth areas. Leads to Full Stack, System Architect, or CTO roles."
+  },
+  {
+    "id": "devops-engineer",
+    "title": "DevOps / Platform Engineer",
+    "description": "Bridge development and operations by automating deployment pipelines, managing cloud infrastructure, and ensuring system reliability.",
+    "skills": ["Linux", "Bash", "Python", "Infrastructure as Code", "CI/CD", "Monitoring", "Cloud Platforms", "Networking"],
+    "tools": ["Docker", "Kubernetes", "Terraform", "Ansible", "Jenkins", "GitHub Actions", "Prometheus", "Grafana", "AWS/GCP/Azure"],
+    "responsibilities": [
+      "Build and maintain CI/CD pipelines",
+      "Manage cloud infrastructure and costs",
+      "Implement monitoring, alerting, and incident response",
+      "Automate repetitive operational tasks",
+      "Ensure system security and compliance",
+      "Support developer productivity"
+    ],
+    "salary_range": "$95,000 – $190,000 / year",
+    "future_scope": "Critical for all tech companies. Platform Engineering and SRE are high-growth specializations. Cloud certifications (AWS, GCP, Azure) significantly boost salary."
+  },
+  {
+    "id": "ml-engineer",
+    "title": "Machine Learning Engineer",
+    "description": "Build production ML systems at scale — from data pipelines to model deployment, monitoring, and continuous improvement.",
+    "skills": ["Python", "Machine Learning", "Deep Learning", "MLOps", "Feature Engineering", "Model Deployment", "Data Engineering"],
+    "tools": ["PyTorch", "TensorFlow", "MLflow", "Kubeflow", "Airflow", "Spark", "Docker", "Kubernetes", "SageMaker"],
+    "responsibilities": [
+      "Design and train ML models for production",
+      "Build scalable data and feature pipelines",
+      "Deploy and monitor models in production",
+      "Implement A/B testing frameworks",
+      "Optimize model inference latency",
+      "Collaborate with data scientists and engineers"
+    ],
+    "salary_range": "$110,000 – $250,000 / year",
+    "future_scope": "One of the fastest-growing and highest-paid roles in tech. LLM fine-tuning, RAG systems, and AI infrastructure are frontier areas with massive demand."
+  },
+  {
+    "id": "data-analyst",
+    "title": "Data Analyst",
+    "description": "Collect, clean, and interpret data to provide actionable business insights through reports, dashboards, and statistical analysis.",
+    "skills": ["SQL", "Python", "R", "Excel", "Data Visualization", "Statistics", "Business Intelligence", "ETL"],
+    "tools": ["Tableau", "Power BI", "Looker", "Google Analytics", "dbt", "BigQuery", "PostgreSQL", "Excel"],
+    "responsibilities": [
+      "Query and clean large datasets",
+      "Build interactive dashboards",
+      "Define and track KPIs",
+      "Communicate insights to non-technical stakeholders",
+      "Perform A/B test analysis",
+      "Maintain data documentation"
+    ],
+    "salary_range": "$60,000 – $120,000 / year",
+    "future_scope": "Strong entry point into data careers. Natural progression to Data Scientist, Analytics Engineer, or Business Intelligence Engineer. SQL and visualization skills are enduring assets."
+  },
+  {
+    "id": "cybersecurity-analyst",
+    "title": "Cybersecurity Analyst",
+    "description": "Protect organizations from cyber threats through continuous monitoring, incident response, vulnerability assessment, and security architecture.",
+    "skills": ["Network Security", "SIEM", "Penetration Testing", "Incident Response", "Risk Assessment", "Python", "Cryptography"],
+    "tools": ["Wireshark", "Nmap", "Metasploit", "Splunk", "CrowdStrike", "Burp Suite", "OWASP ZAP", "Nessus"],
+    "responsibilities": [
+      "Monitor security events and alerts",
+      "Conduct vulnerability assessments",
+      "Respond to and investigate incidents",
+      "Perform security code reviews",
+      "Develop security policies and procedures",
+      "Conduct penetration testing"
+    ],
+    "salary_range": "$80,000 – $170,000 / year",
+    "future_scope": "Severe talent shortage globally. Certifications (CISSP, CEH, OSCP) dramatically increase earning potential. Cloud security and zero-trust architecture are top specializations."
+  },
+  {
+    "id": "cloud-architect",
+    "title": "Cloud Architect",
+    "description": "Design scalable, secure, and cost-effective cloud infrastructure solutions across AWS, GCP, or Azure for enterprise applications.",
+    "skills": ["Cloud Architecture", "AWS", "GCP", "Azure", "Networking", "Security", "Cost Optimization", "Microservices"],
+    "tools": ["AWS CDK", "Terraform", "CloudFormation", "Azure ARM", "GCP Deployment Manager", "Kubernetes", "Istio"],
+    "responsibilities": [
+      "Design cloud-native architecture for new systems",
+      "Migrate on-premise workloads to cloud",
+      "Optimize cloud costs and performance",
+      "Establish security and compliance frameworks",
+      "Create reference architectures and standards",
+      "Advise engineering teams on cloud best practices"
+    ],
+    "salary_range": "$130,000 – $280,000 / year",
+    "future_scope": "Extremely high demand as enterprises migrate to cloud. Multi-cloud expertise and FinOps knowledge are premium skills. Leads to CTO or VP of Engineering roles."
+  },
+  {
+    "id": "product-manager",
+    "title": "Product Manager",
+    "description": "Define product vision, strategy, and roadmap, working at the intersection of business, technology, and user experience.",
+    "skills": ["Product Strategy", "User Research", "Roadmapping", "Data Analysis", "Agile", "Stakeholder Management", "A/B Testing"],
+    "tools": ["Jira", "Confluence", "Figma", "Mixpanel", "Amplitude", "Notion", "Productboard", "UserVoice"],
+    "responsibilities": [
+      "Define and communicate product vision",
+      "Prioritize features using data and user feedback",
+      "Write detailed product requirement documents",
+      "Collaborate with engineering, design, and marketing",
+      "Launch and measure product features",
+      "Own product metrics and KPIs"
+    ],
+    "salary_range": "$100,000 – $220,000 / year",
+    "future_scope": "Critical role in all tech companies. Technical PMs with engineering background command highest salaries. Career leads to VP of Product or Chief Product Officer."
+  },
+  {
+    "id": "ux-designer",
+    "title": "UX/UI Designer",
+    "description": "Create intuitive, accessible, and beautiful user experiences through research, wireframing, prototyping, and visual design.",
+    "skills": ["User Research", "Wireframing", "Prototyping", "Visual Design", "Accessibility", "Design Systems", "Usability Testing"],
+    "tools": ["Figma", "Sketch", "Adobe XD", "InVision", "Zeplin", "Maze", "UserTesting", "Hotjar"],
+    "responsibilities": [
+      "Conduct user interviews and usability tests",
+      "Create wireframes, prototypes, and high-fidelity designs",
+      "Define and maintain design systems",
+      "Collaborate closely with product and engineering",
+      "Document design decisions and guidelines",
+      "Iterate based on user feedback and data"
+    ],
+    "salary_range": "$75,000 – $160,000 / year",
+    "future_scope": "Growing importance as product quality becomes a competitive differentiator. UX writing, motion design, and AI-assisted design tools are emerging skills."
+  },
+  {
+    "id": "full-stack-developer",
+    "title": "Full Stack Developer",
+    "description": "Build complete web applications from database to user interface, working across the entire technology stack.",
+    "skills": ["JavaScript", "TypeScript", "React", "Node.js", "Python", "SQL", "NoSQL", "REST APIs", "DevOps Basics"],
+    "tools": ["Next.js", "Express", "PostgreSQL", "MongoDB", "Redis", "Docker", "Git", "Vercel", "AWS"],
+    "responsibilities": [
+      "Build end-to-end features across frontend and backend",
+      "Design database schemas and APIs",
+      "Implement authentication and authorization",
+      "Optimize application performance",
+      "Deploy and maintain applications",
+      "Write tests across the full stack"
+    ],
+    "salary_range": "$90,000 – $185,000 / year",
+    "future_scope": "Highly versatile role valued by startups and growth-stage companies. Can specialize into senior frontend, backend, or architect tracks. Next.js and serverless are strong growth areas."
+  },
+  {
+    "id": "site-reliability-engineer",
+    "title": "Site Reliability Engineer (SRE)",
+    "description": "Ensure production systems are reliable, scalable, and efficient by applying software engineering principles to operations problems.",
+    "skills": ["Linux", "Python", "Go", "Distributed Systems", "Monitoring", "Incident Management", "Capacity Planning"],
+    "tools": ["Kubernetes", "Prometheus", "Grafana", "PagerDuty", "Terraform", "ELK Stack", "Chaos Engineering tools"],
+    "responsibilities": [
+      "Define and maintain SLOs, SLIs, and error budgets",
+      "Build reliability tooling and automation",
+      "Lead incident response and post-mortem processes",
+      "Optimize system performance and capacity",
+      "Reduce toil through automation",
+      "Partner with dev teams on reliability practices"
+    ],
+    "salary_range": "$120,000 – $240,000 / year",
+    "future_scope": "One of the highest-paid engineering specializations at top tech companies. Chaos engineering, observability, and multi-region reliability are key growth areas."
+  },
+  {
+    "id": "data-engineer",
+    "title": "Data Engineer",
+    "description": "Design and build the data infrastructure, pipelines, and warehouses that enable data science and business intelligence teams.",
+    "skills": ["Python", "SQL", "Spark", "Kafka", "Data Modeling", "ETL/ELT", "Cloud Data Platforms", "dbt"],
+    "tools": ["Apache Spark", "Kafka", "Airflow", "dbt", "Snowflake", "BigQuery", "Databricks", "Redshift"],
+    "responsibilities": [
+      "Build and maintain data pipelines at scale",
+      "Design data warehouse schemas",
+      "Implement real-time streaming data systems",
+      "Ensure data quality and reliability",
+      "Collaborate with data scientists on feature engineering",
+      "Document data lineage and governance"
+    ],
+    "salary_range": "$100,000 – $210,000 / year",
+    "future_scope": "Critical enabler of all data-driven decisions. Lakehouse architectures, real-time analytics, and AI/ML data platforms are high-growth areas."
+  },
+  {
+    "id": "mobile-developer",
+    "title": "Mobile App Developer",
+    "description": "Build native or cross-platform mobile applications for iOS and Android with smooth UX and robust performance.",
+    "skills": ["Swift", "Kotlin", "React Native", "Flutter", "Dart", "iOS SDK", "Android SDK", "Mobile UI/UX"],
+    "tools": ["Xcode", "Android Studio", "Expo", "Firebase", "Fastlane", "TestFlight", "App Store Connect"],
+    "responsibilities": [
+      "Develop native iOS or Android features",
+      "Build cross-platform apps with React Native or Flutter",
+      "Integrate REST APIs and push notifications",
+      "Optimize app performance and battery usage",
+      "Submit and manage apps on App Store / Play Store",
+      "Write UI tests and automated test suites"
+    ],
+    "salary_range": "$85,000 – $175,000 / year",
+    "future_scope": "Mobile remains the primary interface for billions of users. Wearables, AR/VR apps, and on-device AI are emerging frontiers for mobile developers."
+  },
+  {
+    "id": "blockchain-developer",
+    "title": "Blockchain Developer",
+    "description": "Build decentralized applications, smart contracts, and blockchain infrastructure for Web3, DeFi, and enterprise use cases.",
+    "skills": ["Solidity", "Rust", "JavaScript", "Smart Contracts", "Cryptography", "Web3.js", "Ethereum", "DeFi Protocols"],
+    "tools": ["Hardhat", "Truffle", "MetaMask", "IPFS", "OpenZeppelin", "The Graph", "Etherscan"],
+    "responsibilities": [
+      "Write and audit smart contracts in Solidity",
+      "Build dApps and integrate with wallets",
+      "Implement token standards (ERC-20, ERC-721)",
+      "Design tokenomics and governance mechanisms",
+      "Conduct security audits",
+      "Optimize gas costs"
+    ],
+    "salary_range": "$110,000 – $250,000 / year",
+    "future_scope": "Highly specialized with strong demand in Web3, DeFi, and enterprise blockchain. Security auditing expertise commands exceptional rates."
+  },
+  {
+    "id": "ai-engineer",
+    "title": "AI/LLM Engineer",
+    "description": "Build AI-powered products using large language models, fine-tuning, RAG systems, and AI infrastructure for production deployment.",
+    "skills": ["Python", "LLMs", "RAG", "Prompt Engineering", "Fine-tuning", "Vector Databases", "API Integration", "MLOps"],
+    "tools": ["OpenAI API", "Groq", "LangChain", "LlamaIndex", "Chroma", "Pinecone", "Hugging Face", "FastAPI", "Docker"],
+    "responsibilities": [
+      "Build RAG systems and AI pipelines",
+      "Fine-tune and evaluate LLMs",
+      "Design prompts and AI architectures",
+      "Integrate AI capabilities into products",
+      "Monitor AI system quality and safety",
+      "Stay current with rapidly evolving AI landscape"
+    ],
+    "salary_range": "$130,000 – $350,000 / year",
+    "future_scope": "The hottest engineering discipline in 2024–2026. Comprehensive AI knowledge accelerates every adjacent career. Demand far exceeds supply globally."
+  }
+]

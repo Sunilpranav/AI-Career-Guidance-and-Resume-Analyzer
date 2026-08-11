@@ -1,0 +1,240 @@
+/* ============================================================
+   resume.css — Resume analyzer page styles
+   ============================================================ */
+
+/* Drop zone */
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 40px 24px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  background: var(--surface);
+}
+.drop-zone:hover, .drop-zone.drag-over {
+  border-color: var(--primary);
+  background: var(--primary-glow);
+}
+.drop-zone.drag-over { transform: scale(1.01); }
+
+.dz-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+.dz-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 4px;
+}
+.dz-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+.dz-selected {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--success-light);
+  color: var(--success);
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  margin-top: 12px;
+}
+
+/* ATS Score display */
+.ats-result-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+}
+
+.ats-score-ring {
+  position: relative;
+  width: 140px; height: 140px;
+}
+.ats-score-ring svg {
+  transform: rotate(-90deg);
+  width: 100%; height: 100%;
+}
+.ats-ring-bg { fill: none; stroke: var(--surface-secondary); stroke-width: 10; }
+.ats-ring-fill {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 339;
+  stroke-dashoffset: 339;
+  transition: stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.ats-score-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ats-score-num {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.ats-score-denom {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.ats-score-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.ats-score-summary {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  max-width: 300px;
+}
+
+/* Analysis result sections */
+.result-section {
+  margin-bottom: 16px;
+}
+.result-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.result-section-icon { font-size: 0.9rem; }
+
+.result-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.result-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  background: var(--surface-secondary);
+  border-radius: var(--radius-md);
+  line-height: 1.5;
+}
+.result-list li::before {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.list-strengths  li::before { content: '✓'; color: var(--success); font-weight: 700; }
+.list-gaps       li::before { content: '◈'; color: var(--warning); }
+.list-suggestions li::before { content: '→'; color: var(--primary); }
+
+/* Skills grid */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Career match cards */
+.career-match-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.career-match-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.career-match-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.career-match-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+.career-match-pct {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.career-match-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.career-match-salary {
+  font-size: 0.78rem;
+  color: var(--success);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Loading panel */
+.loading-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 40px 24px;
+  text-align: center;
+}
+.loading-panel .spinner { width: 32px; height: 32px; }
+.loading-msg { font-size: 0.9rem; font-weight: 500; color: var(--text-secondary); }
+.loading-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  max-width: 280px;
+}
+.loading-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.5;
+  transition: var(--transition);
+}
+.loading-step.active { opacity: 1; color: var(--text-secondary); }
+.loading-step.done { opacity: 0.8; color: var(--success); }
+.loading-step::before { content: '○'; flex-shrink: 0; }
+.loading-step.active::before { content: '◉'; color: var(--primary); }
+.loading-step.done::before  { content: '✓'; color: var(--success); }

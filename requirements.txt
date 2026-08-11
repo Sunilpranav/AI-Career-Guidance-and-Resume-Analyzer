@@ -1,0 +1,31 @@
+# Core API framework
+fastapi
+uvicorn[standard]
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# Auth
+passlib[bcrypt]
+python-jose[cryptography]
+
+# File parsing
+python-multipart
+pypdf
+python-docx
+
+# AI / LLM
+groq
+
+# RAG / Embeddings
+fastembed
+rank_bm25
+chromadb
+
+# Utilities
+python-dotenv
+pydantic
+email-validator
+aiofiles
+gunicorn

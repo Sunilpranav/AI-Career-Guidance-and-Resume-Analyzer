@@ -1,0 +1,95 @@
+/* ============================================================
+   variables.css — Design tokens for CareerAI
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* ── Brand Colors ────────────────────────────────────── */
+  --primary:          #6366f1;
+  --primary-dark:     #4f46e5;
+  --primary-light:    #818cf8;
+  --primary-glow:     rgba(99, 102, 241, 0.15);
+  --accent:           #06b6d4;
+  --accent-warm:      #f59e0b;
+
+  /* ── Light Mode Surfaces ─────────────────────────────── */
+  --bg:               #f8fafc;
+  --bg-secondary:     #f1f5f9;
+  --surface:          #ffffff;
+  --surface-hover:    #f8fafc;
+  --surface-secondary:#f1f5f9;
+  --border:           #e2e8f0;
+  --border-focus:     #6366f1;
+
+  /* ── Typography ──────────────────────────────────────── */
+  --text-primary:     #0f172a;
+  --text-secondary:   #475569;
+  --text-muted:       #94a3b8;
+  --text-on-primary:  #ffffff;
+
+  /* ── Sidebar ─────────────────────────────────────────── */
+  --sidebar-bg:       #0f172a;
+  --sidebar-text:     #94a3b8;
+  --sidebar-active:   #6366f1;
+  --sidebar-active-bg:rgba(99,102,241,0.12);
+  --sidebar-hover:    rgba(255,255,255,0.05);
+  --sidebar-width:    240px;
+
+  /* ── Status Colors ───────────────────────────────────── */
+  --success:          #10b981;
+  --success-light:    rgba(16, 185, 129, 0.12);
+  --warning:          #f59e0b;
+  --warning-light:    rgba(245, 158, 11, 0.12);
+  --danger:           #ef4444;
+  --danger-light:     rgba(239, 68, 68, 0.12);
+  --info:             #3b82f6;
+  --info-light:       rgba(59, 130, 246, 0.12);
+
+  /* ── Shadows ─────────────────────────────────────────── */
+  --shadow-sm:        0 1px 3px rgba(0,0,0,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md:        0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-lg:        0 10px 30px rgba(0,0,0,0.10), 0 4px 8px rgba(0,0,0,0.04);
+  --shadow-xl:        0 20px 50px rgba(0,0,0,0.12);
+  --shadow-primary:   0 8px 20px rgba(99,102,241,0.25);
+
+  /* ── Radii ───────────────────────────────────────────── */
+  --radius-sm:        6px;
+  --radius-md:        10px;
+  --radius-lg:        16px;
+  --radius-xl:        20px;
+  --radius-full:      9999px;
+
+  /* ── Transitions ─────────────────────────────────────── */
+  --transition:       all 0.2s cubic-bezier(0.4,0,0.2,1);
+  --transition-slow:  all 0.35s cubic-bezier(0.4,0,0.2,1);
+
+  /* ── Layout ──────────────────────────────────────────── */
+  --topbar-height:    60px;
+  --content-max:      1200px;
+}
+
+/* ── Dark Mode ────────────────────────────────────────── */
+[data-theme="dark"] {
+  --bg:               #0b0f1a;
+  --bg-secondary:     #111827;
+  --surface:          #131929;
+  --surface-hover:    #1a2236;
+  --surface-secondary:#1e2b3f;
+  --border:           #1e2b3f;
+  --border-focus:     #818cf8;
+
+  --text-primary:     #f1f5f9;
+  --text-secondary:   #94a3b8;
+  --text-muted:       #475569;
+
+  --sidebar-bg:       #070c16;
+  --sidebar-text:     #64748b;
+  --sidebar-active:   #818cf8;
+  --sidebar-active-bg:rgba(129,140,248,0.12);
+  --sidebar-hover:    rgba(255,255,255,0.04);
+
+  --shadow-sm:        0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md:        0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg:        0 10px 30px rgba(0,0,0,0.5);
+}

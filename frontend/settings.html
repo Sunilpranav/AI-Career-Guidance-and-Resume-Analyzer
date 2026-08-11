@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings — CareerAI</title>
+  <meta name="description" content="Customize your CareerAI experience — appearance, theme, and account preferences."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"/>
+  <link rel="stylesheet" href="/css/variables.css"/>
+  <link rel="stylesheet" href="/css/global.css"/>
+  <link rel="stylesheet" href="/css/components.css"/>
+  <link rel="stylesheet" href="/css/responsive.css"/>
+</head>
+<body>
+<div id="toast-container" class="toast-container"></div>
+
+<div class="app-layout">
+  <main class="main-content">
+    <div class="page-content">
+
+      <div class="page-header fade-in">
+        <h1>Settings</h1>
+        <p>Customize your CareerAI experience.</p>
+      </div>
+
+      <div style="max-width:600px">
+        <!-- Appearance -->
+        <div class="card mb-4 fade-in">
+          <div class="card-title mb-4">🎨 Appearance</div>
+
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+            <div>
+              <div class="fw-600" style="font-size:0.9rem">Theme</div>
+              <div class="text-muted fs-sm">Choose between light and dark mode</div>
+            </div>
+            <div class="tabs">
+              <button class="tab-btn" id="theme-light-btn" onclick="setTheme('light')">☀️ Light</button>
+              <button class="tab-btn" id="theme-dark-btn" onclick="setTheme('dark')">🌙 Dark</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Account -->
+        <div class="card mb-4 fade-in">
+          <div class="card-title mb-4">👤 Account</div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border)">
+              <div>
+                <div class="fw-600 fs-sm">Email Address</div>
+                <div class="text-muted fs-sm" id="settings-email">—</div>
+              </div>
+              <span class="badge badge-success">Verified</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0">
+              <div>
+                <div class="fw-600 fs-sm">Plan</div>
+                <div class="text-muted fs-sm">Free tier — all features included</div>
+              </div>
+              <span class="badge badge-primary">Free</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="card fade-in">
+          <div class="card-title mb-4">ℹ️ About CareerAI</div>
+          <div style="display:flex;flex-direction:column;gap:8px;font-size:0.85rem;color:var(--text-secondary)">
+            <div class="flex" style="justify-content:space-between"><span>Version</span><span class="fw-600">2.0.0</span></div>
+            <div class="flex" style="justify-content:space-between"><span>AI Model</span><span class="fw-600">Llama 3.3 70B (Groq)</span></div>
+            <div class="flex" style="justify-content:space-between"><span>Embeddings</span><span class="fw-600">BGE-small-en (fastembed)</span></div>
+            <div class="flex" style="justify-content:space-between"><span>Backend</span><span class="fw-600">FastAPI + PostgreSQL</span></div>
+          </div>
+
+          <div style="margin-top:16px;padding-top:16px;border-top:1px solid var(--border)">
+            <button onclick="auth.logout();window.location.href='/login.html'" class="btn btn-danger btn-sm">Sign Out of All Sessions</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/layout.js"></script>
+<script>
+  function setTheme(t) {
+    utils.applyTheme(t);
+    document.getElementById('theme-light-btn').classList.toggle('active', t === 'light');
+    document.getElementById('theme-dark-btn').classList.toggle('active', t === 'dark');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    layout.init('settings', 'Settings', 'Appearance & account preferences');
+    const user = auth.getUser();
+    if (user) document.getElementById('settings-email').textContent = user.email;
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    setTheme(currentTheme);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In — CareerAI</title>
+  <meta name="description" content="Sign in to CareerAI — your AI-powered resume analyzer and career guidance platform."/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"/>
+  <link rel="stylesheet" href="/css/variables.css"/>
+  <link rel="stylesheet" href="/css/global.css"/>
+  <link rel="stylesheet" href="/css/components.css"/>
+  <link rel="stylesheet" href="/css/responsive.css"/>
+</head>
+<body>
+<div id="toast-container" class="toast-container"></div>
+
+<div class="auth-layout">
+  <div class="auth-card">
+    <div class="auth-logo">
+      <div class="auth-logo-icon">🚀</div>
+      <div class="auth-logo-name">CareerAI</div>
+      <div class="auth-logo-tag">AI-Powered Career Guidance</div>
+    </div>
+
+    <div class="auth-title">Welcome back</div>
+    <div class="auth-subtitle">Sign in to continue your career journey</div>
+
+    <div id="login-error" class="auth-error hidden" role="alert" aria-live="polite">
+      <span>⚠</span><span id="login-error-text"></span>
+    </div>
+
+    <form id="login-form" class="auth-form" novalidate>
+      <div class="form-group">
+        <label class="form-label" for="login-email">Email address</label>
+        <input type="email" id="login-email" class="form-input" placeholder="you@example.com"
+               autocomplete="email" required aria-required="true"/>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="login-password">Password</label>
+        <input type="password" id="login-password" class="form-input" placeholder="••••••••"
+               autocomplete="current-password" required aria-required="true"/>
+      </div>
+
+      <div class="auth-links">
+        <label class="checkbox-label">
+          <input type="checkbox" id="remember-me"/>
+          Remember me
+        </label>
+        <a href="#" class="auth-link fs-sm">Forgot password?</a>
+      </div>
+
+      <button type="submit" id="login-btn" class="btn btn-primary btn-full btn-lg">
+        Sign In
+      </button>
+    </form>
+
+    <div class="divider mt-4">or</div>
+
+    <div class="text-center mt-3" style="font-size:0.85rem;color:var(--text-muted)">
+      Don't have an account?
+      <a href="/register.html" class="auth-link">Create one free</a>
+    </div>
+
+    <div style="margin-top:28px;padding-top:16px;border-top:1px solid var(--border);text-align:center">
+      <span class="fs-xs text-muted">Powered by Groq AI · Free forever</span>
+    </div>
+  </div>
+</div>
+
+<script src="/js/api.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/auth.js"></script>
+<script>
+  utils.initTheme();
+  // Fix error element reference
+  const _err = document.getElementById('login-error');
+  const _errText = document.getElementById('login-error-text');
+  // Override initLoginPage to show error properly
+  document.getElementById('login-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = document.getElementById('login-email').value.trim();
+    const password = document.getElementById('login-password').value;
+    _err.classList.add('hidden');
+    const btn = document.getElementById('login-btn');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner spinner-sm"></span> Signing in…';
+    try {
+      const fd = new URLSearchParams();
+      fd.set('username', email);
+      fd.set('password', password);
+      const res = await fetch('/auth/login', { method: 'POST', headers: {'Content-Type':'application/x-www-form-urlencoded'}, body: fd });
+      if (!res.ok) { const d = await res.json().catch(()=>{}); throw new Error(d?.detail || 'Invalid email or password.'); }
+      const data = await res.json();
+      auth.saveSession(data.access_token, data.user);
+      window.location.href = '/dashboard.html';
+    } catch (err) {
+      _errText.textContent = err.message;
+      _err.classList.remove('hidden');
+      btn.disabled = false;
+      btn.innerHTML = 'Sign In';
+    }
+  });
+  auth.redirectIfLoggedIn();
+</script>
+</body>
+</html>
